@@ -1,0 +1,37 @@
+﻿<Page x:Class="WPFPWZ.Sklad"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:WPFPWZ"
+      mc:Ignorable="d" 
+      d:MinHeight="434" d:MinWidth="510"
+      Title="настройки склада">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" Background="White" Margin="10 10 10 10" Padding="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="40" ShadowDepth="1" Color="Black" Direction="0.3"/>
+            </Border.Effect>
+            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" Margin="0 0 5 0">
+                <StackPanel Name="stelazhContainer" Background="White" Margin="5" VerticalAlignment="Stretch">
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+                <TextBlock x:Name="triger" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="red" Margin="7" FontWeight="Bold" FontSize="15"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btn_add" Grid.Column="0" Content="Добавить стеллаж" Click="Btn_add" HorizontalAlignment="Stretch" VerticalAlignment="Top" MinHeight="80" Margin="10 0 10 0" Background="#00AF64" BorderBrush="#00AF64" FontSize="20"/>
+            <Button x:Name="btn_delate" Grid.Column="1" Content="Удалить стеллаж" Click="Btn_delate" HorizontalAlignment="Stretch" VerticalAlignment="Top" MinHeight="80"  Margin="10 0 10 0" Background="White" Foreground="#00AF64" FontSize="20" BorderBrush="#00AF64" Visibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Page>
